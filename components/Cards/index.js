@@ -46,9 +46,9 @@ function Card(response) {
 
 // Text Content
 
-    // headline.textContent = ;
-    // imgUrl.setAttribute('src', );
-    // authorName.textContent = ;
+    headline.textContent = response.headline;
+    imgUrl.setAttribute('src', response.authorPhoto);
+    authorName.textContent = response.authorName;
 
 return card;
 }
@@ -58,13 +58,26 @@ const cardsContainer = document.querySelector('.cards-container');
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then(response => {
     console.log(response.data.articles);
-    const array1 = Object.entries(response.data.articles)
-    console.log(array1);
-    for (const [a, b] of array1) {
-        console.log(`${a}, ${b}`);
-    }
-    const newCard = Card(response.data.articles);
+    response.data.articles.bootstrap.forEach(element => {
+    const newCard = Card(element);
     cardsContainer.append(newCard);
+    })
+    response.data.articles.javascript.forEach(element => {
+        const newCard = Card(element);
+        cardsContainer.append(newCard);
+        })
+    response.data.articles.jquery.forEach(element => {
+        const newCard = Card(element);
+        cardsContainer.append(newCard);
+            })
+    response.data.articles.node.forEach(element => {
+        const newCard = Card(element);
+        cardsContainer.append(newCard);
+                })
+    response.data.articles.technology.forEach(element => {
+        const newCard = Card(element);
+        cardsContainer.append(newCard);
+                    })
 })
 
 .catch( error => {
