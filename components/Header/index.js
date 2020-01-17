@@ -39,7 +39,7 @@ function Header() {
 return header;
 }
 
-// 
+
 const newHeader = document.querySelector('.header-container');
 console.log(newHeader);
-newHeader.append(Header);
+newHeader.append(Header());
