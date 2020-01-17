@@ -1,0 +1,24 @@
+Self-Study Questions
+Demonstrate your understanding of this week's concepts by answering the following free-form questions.
+Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
+
+
+1. What is the DOM? 
+
+The Document Object Model is an object representation of the html elements of a webpage. It gives us an interface that with which we can interact with and manipulate the page, changing document structure, content, and styling. 
+
+2. What is an event? 
+
+Every user interaction with a site is an event: a click, moving the mouse, scrolling the page, pressing a key on the keyboard, these are all events on the page, and the browser can detect all of them.
+
+3. What is an event listener?
+
+ It’s the tracking process of when an event happens on an element and it’s then the subsequent action taken. To put it another way, it’s when we choose specific elements to listen to specific events and fire a callback when that event occurs. 
+ 
+4. Why would we convert a NodeList into an Array? 
+
+A NodeList only has access to one Array method, which is .forEach. If we convert a NodeList into an Array, we’ll then be able to use all of the ES6 array methods.
+
+5. What is a component?
+
+ Components are reusable pieces of code that can be used to build elements sharing functionality and styling. Components are the heart of any dynamic web application and JavaScript framework.
